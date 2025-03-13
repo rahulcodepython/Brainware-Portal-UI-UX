@@ -31,22 +31,6 @@
 	</div>
 
 	<script>
-		function updateTime() {
-			let now = new Date();
-			let hour = now.getHours();
-			let minute = now.getMinutes();
-			let second = now.getSeconds();
-			let ampm = hour >= 12 ? "PM" : "AM";
-			hour = hour % 12 || 12;
-			minute = minute < 10 ? "0" + minute : minute;
-			second = second < 10 ? "0" + second : second;
-
-			let timeString = `${hour}:${minute}:${second} ${ampm}`;
-			let options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
-			let dateString = now.toLocaleDateString(undefined, options);
-
-			document.getElementById("date-time").textContent = `${dateString} | ${timeString}`;
-		}
 
 		function getGreeting() {
 			let hour = new Date().getHours();
@@ -56,8 +40,6 @@
 
 		window.onload = function () {
 			getGreeting();
-			updateTime();
-			setInterval(updateTime, 1000);
 
 			setTimeout(() => {
 				document.getElementById("login-card").classList.add("opacity-100", "translate-y-0");
