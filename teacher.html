@@ -2,53 +2,65 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login Page</title>
-	<style>
-		body {
-			background-image: url('Brainware-university.jpg');
-		}
-	</style>
-	<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<link rel="shortcut icon" href="Brainware-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body class="h-screen w-screen flex items-center justify-center bg-cover bg-center"ś
-	style="background-image: url('Brainware-university.jpg');">
-	<div class="flex justify-center items-center text-center w-full max-w-md p-10">
-		<div id="login-card"
-			class="flex flex-col items-center p-8 bg-white bg-opacity-40 backdrop-blur-md border border-white border-opacity-20 rounded-xl shadow-lg w-full">
-			<h1 class="text-2xl font-bold text-gray-800 mb-2 shadow-md">
-				Login
-			</h1>
-			<p id="greeting-text" class="text-lg font-medium text-gray-600 mb-2"></p>
-			<p id="date-time" class="text-gray-700 font-medium mb-4"></p>
-			<img src="logo.png" alt="User Image" class="mb-4 rounded-full w-20 h-20 object-cover">
-			<input id="student-code" type="text" placeholder="Enter your faculty code"
-				class="mb-3 p-3 w-full max-w-xs border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-			<input id="password" type="password" placeholder="Enter your password"
-				class="mb-3 p-3 w-full max-w-xs border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-			<button type="submit"
-				class="mt-2 py-2 px-4 w-full max-w-xs bg-blue-600 text-white rounded-lg text-lgś">
-				Login
-			</button>
-		</div>
-	</div>
-	<script>
-		function getGreeting() {
-			let hour = new Date().getHours();
-			let greeting = hour < 12 ? "Good Morning!" : hour < 18 ? "Good Afternoon!" : "Good Evening!";
-			document.getElementById("greeting-text").textContent = greeting;
-		}
+<body class="h-screen w-screen flex items-center justify-center bg-cover bg-center"
+    style="background-image: url('Brainware-university.jpg');">
+    
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 w-full">
+        
+        <div class="flex items-center space-x-2 mb-3 px-6 py-2 bg-white/70 backdrop-blur-md rounded-lg shadow-lg">
 
-		window.onload = function () {
-			getGreeting();
-			setTimeout(() => {
-				document.getElementById("login-card").classList.remove("opacity-0", "translate-y-5");
-				document.getElementById("login-card").classList.add("opacity-100", "translate-y-0");
-			}, 500);
-		};
-	</script>
+            <img class="w-10 h-10" src="logo.png" alt="logo">
+            <h2 class="text-black text-2xl font-bold">Brainware University</h2>
+        </div>
+
+        <div class="w-full bg-white/70 0 backdrop-blur-md rounded-lg shadow-lg sm:max-w-md xl:p-0">
+            <div class="p-4 space-y-4 md:space-y-6 sm:p-8">
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl">
+                    Log in to your Faculty Portal
+                </h1>
+                <form class="space-y-4 md:space-y-6" action="#">
+                    <div>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Teacher Code: BWU/****/**/***" required>
+                    </div>
+                    <div class="relative">
+                        <input type="password" name="password" id="password" placeholder="Password: ••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" required>
+                        <span class="absolute right-3 top-3 cursor-pointer text-gray-500" onclick="togglePassword()">
+                            <i id="eyeIcon" class="fas fa-eye"></i>
+                        </span>                        
+                    </div>
+                    <button type="submit" class="w-full text-white bg-[#2563eb] hover:bg-blue-700 transition duration-300 ease-in-out font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                        Log in
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            let passwordField = document.getElementById("password");
+            let eyeIcon = document.getElementById("eyeIcon");
+        
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }        
+    </script>
+
 </body>
 
 </html>
