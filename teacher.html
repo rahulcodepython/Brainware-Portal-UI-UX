@@ -5,8 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login Page</title>
+	<style>
+		body {
+			background-image: url('Brainware-university.jpg');
+		}
+	</style>
 	<script src="https://cdn.tailwindcss.com"></script>
-	style
 </head>
 
 <body class="h-screen w-screen flex items-center justify-center bg-cover bg-center"ś
@@ -39,10 +43,8 @@
 
 		window.onload = function () {
 			getGreeting();
-			updateTime();
-			setInterval(updateTime, 1000);
-
 			setTimeout(() => {
+				document.getElementById("login-card").classList.remove("opacity-0", "translate-y-5");
 				document.getElementById("login-card").classList.add("opacity-100", "translate-y-0");
 			}, 500);
 		};
