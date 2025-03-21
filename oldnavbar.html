@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sidebar with Toggle Dropdown</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+
+		body {
+			display: flex;
+			background-color: #f4f4f4;
+			background-image: url(Brainware-university.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 100vh;
+			width: 100vw;
+		}
+
+		.sidebar {
+			width: 250px;
+			height: 80vh;
+			overflow-y: auto;
+			background-color: white;
+			border-radius: 10px;
+			padding: 15px;
+			margin: 20px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+		}
+
+		.sidebar ul {
+			list-style: none;
+		}
+
+		.sidebar ul li {
+			cursor: pointer;
+			display: flex;
+			justify-content: start;
+			color: black;
+			padding: 0 2px;
+		}
+
+		.sidebar ul li:hover {
+			background: #2d3e46;
+			border-radius: 5px;
+			color: white;
+		}
+
+		/*.sidebar ul li i {
+            font-size: 16px;
+        }*/
+
+		/* Dropdown */
+		.dropdown {
+			display: none;
+			list-style: none;
+			padding-left: 20px;
+			background: #2d3e46;
+			border-radius: 5px;
+			margin-top: 5px;
+		}
+
+		.dropdown li {
+			padding: 10px;
+			color: white;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.dropdown li:hover {
+			background: #3e5059;
+		}
+
+		/* Show dropdown */
+		.expand {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="sidebar">
+		<ul>
+			<li><i class="fas fa-bars"></i> Self Service <i class="fas fa-chevron-down"></i></li>
+			<li><i class="fas fa-user"></i> Profile</li>
+			<li><i class="fas fa-folder"></i> Attendance of Assessment</li>
+			<li><i class="fas fa-folder"></i> Lecture Plan</li>
+			<li><i class="fas fa-book"></i> Academic Resource</li>
+			<li><i class="fas fa-user"></i> Payment</li>
+			<li><i class="fas fa-user"></i> Online Money Receipt</li>
+			<li onclick="toggleDropdown()">
+				<i class="fas fa-file-alt"></i> Marks
+				<i class="fas fa-chevron-down" id="arrow"></i>
+			</li>
+
+			<ul class="dropdown" id="marksDropdown">
+				<li><i class="far fa-circle"></i> Class Test And Unit Test</li>
+				<li><i class="far fa-circle"></i> Semester / Year End Result</li>
+				<li><i class="far fa-circle"></i> Semester / Year End Result (Backlog)</li>
+				<li><i class="far fa-circle"></i> Semester / Year End Result (Review)</li>
+				<li><i class="far fa-circle"></i> Semester / Year End Result (Special)</li>
+			</ul>
+
+			<li><i class="far fa-eye"></i> Examination Form Print</li>
+			<li><i class="far fa-eye"></i> Backlog Form Submit</li>
+			<li><i class="far fa-eye"></i> Backlog Form Print</li>
+			<li><i class="far fa-eye"></i> Supplementary Form Print</li>
+			<li><i class="fas fa-id-card"></i> Admit Card</li>
+			<li><i class="fas fa-eye"></i> Attendance</li>
+		</ul>
+	</div>
+
+	<script>
+		function toggleDropdown() {
+			var dropdown = document.getElementById("marksDropdown");
+			var arrow = document.getElementById("arrow");
+			dropdown.classList.toggle("expand");
+			arrow.classList.toggle("rotate");
+		}
+	</script>
+
+</body>
+
+</html>
