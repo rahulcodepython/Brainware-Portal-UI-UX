@@ -12,40 +12,21 @@
 	style="background-image: url('Brainware-university.jpg');">
 	<div class="flex justify-center items-center text-center w-full max-w-md p-10">
 		<div id="login-card"
-			class="flex flex-col items-center p-8 bg-white bg-opacity-40 backdrop-blur-md border border-white border-opacity-20 rounded-xl shadow-lg w-full opacity-0 transform -translate-y-5 transition-opacity duration-500 ease-in-out">
-			<h1 class="text-2xl font-bold text-gray-800 mb-2 shadow-md">
-				Login
+			class="flex flex-col gap-4 items-center p-8 bg-white bg-opacity-40 backdrop-blur-md rounded-xl w-full">
+			<h1 class="text-2xl font-bold">
+				Login your portal
 			</h1>
-			<p id="greeting-text" class="text-lg font-medium text-gray-600 mb-2"></p>
-			<p id="date-time" class="text-gray-700 font-medium mb-4"></p>
-			<img src="logo.png" alt="User Image" class="mb-4 rounded-full w-20 h-20 object-cover">
-			<input id="student-code" type="text" placeholder="Enter your student code"
-				class="mb-3 p-3 w-full max-w-xs border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+			<input id="student_code" type="text" placeholder="Enter your student code"
+				class="p-3 w-full max-w-xs border border-gray-300 rounded-lg focus:outline-none">
 			<input id="password" type="password" placeholder="Enter your password"
-				class="mb-3 p-3 w-full max-w-xs border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+				class="p-3 w-full max-w-xs border border-gray-300 rounded-lg focus:outline-none">
 			<button type="submit"
-				class="mt-2 py-2 px-4 w-full max-w-xs bg-blue-600 text-white rounded-lg text-lg transition hover:bg-blue-700 hover:scale-105">
+				class="py-2 px-4 w-full max-w-xs bg-blue-600 text-white rounded-lg text-lg">
 				Login
 			</button>
 		</div>
 	</div>
 </style>
-	<script>
-
-		function getGreeting() {
-			let hour = new Date().getHours();
-			let greeting = hour < 12 ? "Good Morning!" : hour < 18 ? "Good Afternoon!" : "Good Evening!";
-			document.getElementById("greeting-text").textContent = greeting;
-		}
-
-		window.onload = function () {
-			getGreeting();
-
-			setTimeout(() => {
-				document.getElementById("login-card").classList.add("opacity-100", "translate-y-0");
-			}, 500);
-		};
-	</script>
 </body>
 
 </html>
