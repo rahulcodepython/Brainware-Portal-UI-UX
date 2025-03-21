@@ -2,21 +2,89 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		a{
-			background-color: ;
-		}
-		}
-	</style>
-	<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainware University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            background-image: url(Brainware-university.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Poppins', sans-serif;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #555;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body class="h-screen flex justify-center items-center">
-	<a href="/student.html" class="py-2 px-4 bg-blue-500 text-white rounded-lg text-lg">Go to Student Page</a>
-	<a href="/teacher.html" class="py-2 px-4 bg-green-500 text-white rounded-lg text-lg">Go to Teacher Page</a>
+    <div class="main-container">
+        <h1 class="text-2xl font-bold text-black">Welcome to Brainware University Portal</h1>
+        <div class="container">
+            <div class="card">
+                <div class="logo">🧑‍🎓</div>
+                <h2 class="text-xl font-bold">Student</h2>
+                <a href="/student.html" class="btn bg-blue-500 text-white">
+                    Go to Student Page
+                </a>
+            </div>
+            <div class="card">
+                <div class="logo">🏫</div>
+                <h2 class="text-xl font-bold">Teacher</h2>
+                <a href="/teacher.html" class="btn bg-green-500 text-white">
+                    Go to Facuty page
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
