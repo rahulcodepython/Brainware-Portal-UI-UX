@@ -5,15 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login Page</title>
+	<style>
+		body {
+			background-image: url('Brainware-university.jpg');
+		}
+	</style>
 	<script src="https://cdn.tailwindcss.com"></script>
-	style
 </head>
 
-<body class="h-screen w-screen flex items-center justify-center bg-cover bg-center"
-	style="background-image: url('Brainware-university.jpg');">
+<body class="h-screen w-screen flex items-center justify-center bg-cover bg-center" >
 	<div class="flex justify-center items-center text-center w-full max-w-md p-10">
 		<div id="login-card"
-			class="flex flex-col items-center p-8 bg-white bg-opacity-40 backdrop-blur-md border border-white border-opacity-20 rounded-xl shadow-lg w-full opacity-0 transform -translate-y-5 transition-opacity duration-500 ease-in-out">
+			class="flex flex-col items-center p-8 bg-white bg-opacity-40 backdrop-blur-md border border-white border-opacity-20 rounded-xl shadow-lg w-full opacity-0 transform translate-y-5 transition-all duration-500 ease-in-out">
 			<h1 class="text-2xl font-bold text-gray-800 mb-2 shadow-md">
 				Login
 			</h1>
@@ -39,10 +42,8 @@
 
 		window.onload = function () {
 			getGreeting();
-			updateTime();
-			setInterval(updateTime, 1000);
-
 			setTimeout(() => {
+				document.getElementById("login-card").classList.remove("opacity-0", "translate-y-5");
 				document.getElementById("login-card").classList.add("opacity-100", "translate-y-0");
 			}, 500);
 		};
