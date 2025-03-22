@@ -162,60 +162,93 @@
     <!-- Body Portion -->
 
     <div class="flex flex-col md:ml-64 p-4">
+
+
         <!-- Student Name -->
-        <div class="text-lg font-semibold bg-white p-2 rounded-md shadow-md w-fit">
-            Hello, <span id="studentName">Student Name</span>
+        <div class="text-left text-sm font-semibold p-2 mb-1">
+            <p>Welcome</p>
+            <p class="text-base font-bold">Soujash Chowdhury</p>
+            <p class="text-gray-600">BWU/BCA/23/408</p>
         </div>
 
-        <!-- Dashboard Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-            <div class="bg-white p-4 rounded-md shadow-md">Attendance</div>
-            <div class="bg-white p-4 rounded-md shadow-md">Fees</div>
-            <div class="bg-white p-4 rounded-md shadow-md">Activity</div>
-            <div class="bg-white p-4 rounded-md shadow-md">SGPA</div>
-        </div>
 
-        <!-- Examination Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <!-- Exam Form Fill-Up -->
-            <div class="bg-white p-4 rounded-md shadow-md">
-                <h2 class="text-lg font-semibold mb-2">Examination Form Fill-up</h2>
-                <div class="flex flex-col gap-2">
-                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-md text-center">Term-End Exam Form</a>
-                    <a href="#" class="bg-yellow-500 text-white px-4 py-2 rounded-md text-center">Supplementary Exam Form</a>
-                    <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md text-center">Backlog Exam Form</a>
+            <!-- Dashboard Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-green-500 text-white p-4 rounded-md shadow-md">
+                    <h2 class="text-2xl font-bold">63%</h2>
+                    <p>Attendance</p>
+                    <button class="mt-2 text-white">More info →</button>
+                </div>
+                <div class="bg-blue-500 text-white p-4 rounded-md shadow-md">
+                    <h2 class="text-xl font-bold">UPCOMING FEE</h2>
+                    <p>Payment (Rs.: 47400) [31-Jul-2025]</p>
+                    <button class="mt-2 text-white">Make Payment →</button>
+                </div>
+                <div class="bg-yellow-500 text-white p-4 rounded-md shadow-md">
+                    <h2 class="text-2xl font-bold">1</h2>
+                    <p>Number of Activities</p>
+                    <button class="mt-2 text-white">More info →</button>
+                </div>
+                <div class="bg-red-500 text-white p-4 rounded-md shadow-md">
+                    <h2 class="text-2xl font-bold">9.65</h2>
+                    <p>SGPA - 3rd Semester</p>
+                    <button class="mt-2 text-white">More info →</button>
                 </div>
             </div>
-
-            <!-- Admit Card Download -->
-            <div class="bg-white p-4 rounded-md shadow-md">
-                <h2 class="text-lg font-semibold mb-2">Admit Card Download</h2>
-                <div class="flex flex-col gap-2">
-                    <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-md text-center">Term-End Admit Card</a>
-                    <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded-md text-center">Supplementary Admit Card</a>
-                    <a href="#" class="bg-purple-500 text-white px-4 py-2 rounded-md text-center">Backlog Admit Card</a>
+        
+            <!-- Examination & Admit Card Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <button class="bg-blue-600 text-white p-4 rounded-md shadow-md">Examination Form Fill-up</button>
+                <button class="bg-green-600 text-white p-4 rounded-md shadow-md">Admit Card Download</button>
+            </div>
+        
+            <!-- Attendance Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <!-- Today's Attendance Table -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-lg font-semibold mb-2">Today's Attendance</h2>
+                    <table class="w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 p-2">Course Name</th>
+                                <th class="border border-gray-300 p-2">P/A</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="border border-gray-300 p-2">Aptitude-IV</td><td class="border border-gray-300 p-2">P</td></tr>
+                            <tr><td class="border border-gray-300 p-2">Preparatory Paper</td><td class="border border-gray-300 p-2">P</td></tr>
+                            <tr><td class="border border-gray-300 p-2">Practice Lab</td><td class="border border-gray-300 p-2">A</td></tr>
+                            <tr><td class="border border-gray-300 p-2">Soft Skill Boot Camp</td><td class="border border-gray-300 p-2">P</td></tr>
+                            <tr><td class="border border-gray-300 p-2">Alternative English</td><td class="border border-gray-300 p-2">A</td></tr>
+                            <tr><td class="border border-gray-300 p-2">Design and Analysis of Algorithm</td><td class="border border-gray-300 p-2">P</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+                <!-- Overall Attendance Table -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <h2 class="text-lg font-semibold mb-2">Overall Attendance</h2>
+                    <table class="w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 p-2">Course Code</th>
+                                <th class="border border-gray-300 p-2">Course Name</th>
+                                <th class="border border-gray-300 p-2">Attendance</th>
+                                <th class="border border-gray-300 p-2">Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="border border-gray-300 p-2">APTI401</td><td class="border border-gray-300 p-2">Aptitude-IV</td><td class="border border-gray-300 p-2">5/8</td><td class="border border-gray-300 p-2">63%</td></tr>
+                            <tr><td class="border border-gray-300 p-2">BUPRP</td><td class="border border-gray-300 p-2">Preparatory Paper</td><td class="border border-gray-300 p-2">1/1</td><td class="border border-gray-300 p-2">100%</td></tr>
+                            <tr><td class="border border-gray-300 p-2">BULAB</td><td class="border border-gray-300 p-2">Practice Lab</td><td class="border border-gray-300 p-2">0/0</td><td class="border border-gray-300 p-2">0%</td></tr>
+                            <tr><td class="border border-gray-300 p-2">SBC</td><td class="border border-gray-300 p-2">Soft Skill Boot Camp</td><td class="border border-gray-300 p-2">8/14</td><td class="border border-gray-300 p-2">57%</td></tr>
+                            <tr><td class="border border-gray-300 p-2">AEC00006C</td><td class="border border-gray-300 p-2">Alternative English</td><td class="border border-gray-300 p-2">0/0</td><td class="border border-gray-300 p-2">0%</td></tr>
+                            <tr><td class="border border-gray-300 p-2">BCA47111</td><td class="border border-gray-300 p-2">Design and Analysis of Algorithm</td><td class="border border-gray-300 p-2">30/47</td><td class="border border-gray-300 p-2">64%</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-
-        <!-- Attendance Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <!-- Today's Attendance -->
-            <div class="bg-white p-4 rounded-md shadow-md">
-                <h2 class="text-lg font-semibold mb-2">Today's Attendance</h2>
-                <ul id="todaysAttendance" class="list-disc pl-5">
-                    <li>Loading...</li> <!-- Placeholder -->
-                </ul>
-            </div>
-
-            <!-- Overall Attendance (Subject-wise) -->
-            <div class="bg-white p-4 rounded-md shadow-md">
-                <h2 class="text-lg font-semibold mb-2">Overall Attendance</h2>
-                <div id="subjectAttendanceList">
-                    <p>Loading...</p>
-                </div>
-            </div>
-        </div>
+        
 
         <!-- Latest Updates -->
         <div class="bg-white p-4 rounded-md shadow-md mt-4">
@@ -370,67 +403,6 @@
 			if (window.initFlowbite) window.initFlowbite();
 		});
 	</script>
-
-    <!-- Api call for Today and Overall Attendance -->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Replace with your actual API endpoints
-            const studentAPI = "http://localhost:5000/api/student";
-            const attendanceAPI = "http://localhost:5000/api/attendance";
-
-            // Fetch Student Name
-            fetch(studentAPI)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("studentName").innerText = data.name;
-                })
-                .catch(error => console.error("Error fetching student data:", error));
-
-            // Fetch Attendance Data
-            fetch(attendanceAPI)
-                .then(response => response.json())
-                .then(data => {
-                    // Today's Attendance
-                    const todaysAttendanceList = document.getElementById("todaysAttendance");
-                    todaysAttendanceList.innerHTML = "";
-                    if (data.today.length > 0) {
-                        data.today.forEach(subject => {
-                            let li = document.createElement("li");
-                            li.innerText = subject;
-                            todaysAttendanceList.appendChild(li);
-                        });
-                    } else {
-                        todaysAttendanceList.innerHTML = "<li>No attendance recorded today</li>";
-                    }
-
-                    // Subject-wise Attendance
-                    const subjectAttendanceList = document.getElementById("subjectAttendanceList");
-                    subjectAttendanceList.innerHTML = "";
-
-                    data.overall.forEach(subject => {
-                        let percentage = (subject.attended / subject.total) * 100;
-                        
-                        let subjectDiv = document.createElement("div");
-                        subjectDiv.classList.add("mb-4");
-
-                        subjectDiv.innerHTML = `
-                            <h3 class="font-semibold">${subject.name}</h3>
-                            <p>${subject.attended} / ${subject.total} classes attended</p>
-                            <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
-                                <div class="h-4 rounded-full" style="width: ${percentage}%; background-color: ${
-                                    percentage < 75 ? 'red' : 'green'
-                                }"></div>
-                            </div>
-                        `;
-                        subjectAttendanceList.appendChild(subjectDiv);
-                    });
-                })
-                .catch(error => console.error("Error fetching attendance data:", error));
-        });
-    </script>
-
-
 
 </body>
 
