@@ -16,43 +16,50 @@
 <body class="bg-gray-100">
 
     <!-- Sidebar Toggle Button -->
-    <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
-        aria-controls="sidebar-multi-level-sidebar" type="button"
-        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-        <span class="sr-only">Open sidebar</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-            </path>
-        </svg>
-    </button>
+	<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
+    aria-controls="sidebar-multi-level-sidebar" type="button"
+    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" fill-rule="evenodd"
+            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+        </path>
+    </svg>
+</button>
 
-    <!-- Sidebar -->
-    <aside id="sidebar-multi-level-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <div class="h-full px-3 py-4 flex flex-col justify-between">
-            <ul class="space-y-2" id="sidebar-menu">
-                <!-- Sidebar items will be dynamically added here -->
-            </ul>
+<!-- Sidebar -->
+<aside id="sidebar-multi-level-sidebar"
+    class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <div class="h-full px-3 py-4 flex flex-col justify-between">
+        <ul class="space-y-2" id="sidebar-menu">
+            <!-- Sidebar items will be dynamically added here -->
+        </ul>
 
 
-            <!-- Logout Button -->
-            <div class="p-4">
-                <a href="#" class="flex items-center p-2 text-red-500 rounded-lg hover:bg-red-100">
-                    <svg class="w-5 h-5 text-red-400 group-hover:text-red-600" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                        <path d="M15 18l6-6m0 0l-6-6m6 6H9"></path>
-                        <path d="M3 3v18"></path>
-                    </svg>
-                    <span class="ml-3">Log Out</span>
-                </a>
-            </div>
-    </aside>
+        <!-- Logout Button -->
+        <a href="#" class="flex items-center p-2 text-red-500 rounded-lg hover:bg-red-100 text-xs">
+            <svg class="w-3 h-3 text-red-400 group-hover:text-red-600" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M15 18l6-6m0 0l-6-6m6 6H9"></path>
+                <path d="M3 3v18"></path>
+            </svg>
+            <span class="ml-3">Log Out</span>
+        </a>
+</aside>
 
 
 <!-- Main Content -->
 <div class="p-6 sm:ml-64">
+
+    <div class="text-gray-600 text-xs mb-3">
+        <a href="student-dashboard.html" class="flex items-center text-blue-600 hover:underline">
+            Dashboard
+        </a>
+        <span class="mx-2 text-gray-400">></span>
+        <span class="text-gray-800 font-medium">Academic Resource</span>
+    </div>
+
     <h1 class="text-center text-2xl font-bold text-gray-800 mb-6">Academic Resources</h1>
     <div class="flex flex-wrap justify-center gap-4 mb-4">
         <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
@@ -96,35 +103,78 @@
 
     <script>
         const sidebarItems = [
-            { label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
-            { label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
-            { label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
-            { label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },
-            { label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: 'student-academicResourse.html' },
-            { label: 'Online Payment Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: 'student-paymentReceipt.html' },
-            { label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: 'student-document.html' }
-        ];
+		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
+		{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
+		{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
+		{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },
+		{ label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: 'student-academicResourse.html' },
+		{ label: 'Online Payment Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: 'student-paymentReceipt.html' },
+		{ label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: 'student-document.html' },
+			{
+				label: 'More',
+				icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 "/>',
+				collapsible: true,
+				children: [
+					{ label: 'Online Payment', url: '#' },
+					{ label: 'Admission Documents', url: '#' },
+					{ label: 'Online Money Receipt', url: '#' },
+				]
+			}
+		];
 
-        function renderSidebar() {
-            const sidebarMenu = document.getElementById('sidebar-menu');
-            sidebarMenu.innerHTML = sidebarItems.map(item => `
-			<li>
-				<a href="${item.url}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-					<svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+		function renderSidebar() {
+			const sidebarContent = document.querySelector('#sidebar-multi-level-sidebar .h-full ul');
+			sidebarContent.innerHTML = sidebarItems.map(item => {
+				if (item.collapsible) {
+					return `
+                <li>
+                    <button type="button"
+                        class="flex items-center w-full p-2 text-xs text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        aria-controls="dropdown-${item.label}" data-collapse-toggle="dropdown-${item.label}">
+                        <svg class="w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+						${item.icon}
+					</svg>
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">${item.label}</span>
+                        <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
+                    <ul id="dropdown-${item.label}" class="hidden py-2 space-y-2">
+                        ${item.children.map(child => `
+                            <li>
+                                <a href="${child.url}"
+                                    class="flex text-xs items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    ${child.label}
+                                </a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </li>
+            `;
+				} else {
+					return `
+					<li>
+				<a href="${item.url}" class="flex text-xs items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<svg class="w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
 						${item.icon}
 					</svg>
 					<span class="ms-3">${item.label}</span>
 				</a>
 			</li>
-		`).join('');
-        }
+                
+            `;
+				}
+			}).join('');
+		}
 
-        function logout() {
-            alert("Logging out...");
-            window.location.href = "student.html"; // Redirect to login page
-        }
-
-        renderSidebar();
+		// Initialize the sidebar when the DOM is loaded
+		document.addEventListener('DOMContentLoaded', () => {
+			renderSidebar();
+			// Re-initialize Flowbite components after dynamic rendering
+			if (window.initFlowbite) window.initFlowbite();
+		});
     </script>
 </body>
 
