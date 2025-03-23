@@ -16,33 +16,63 @@
 		<h1 class="text-2xl font-bold text-black bg-white/20 backdrop-blur-md px-4 py-2 rounded-md">
 			Welcome to Brainware University Portal
 		</h1>
-		<div class="flex flex-col md:flex-row gap-5 justify-center items-center">
-			<div class="bg-white/70 backdrop-blur-sm p-6 rounded-md shadow-lg w-72 flex flex-col items-center gap-4">
-				<div
-					class="w-20 h-20 rounded-full bg-gray-300 flex justify-center items-center text-4xl font-bold text-gray-700">
-					🧑‍🎓
-				</div>
-				<h2 class="text-xl font-bold">
-					Student
-				</h2>
-				<a href="student.html"
-					class="px-5 py-2 bg-blue-500 text-white font-bold rounded-full text-lg transition-transform transform hover:scale-105">
-					Go to Student Page
-				</a>
-			</div>
-			<div class="bg-white/70 backdrop-blur-sm p-6 rounded-md shadow-lg w-72 flex flex-col items-center gap-4">
-				<div
-					class="w-20 h-20 rounded-full bg-gray-300 flex justify-center items-center text-4xl font-bold text-gray-700">
-					🏫
-				</div>
-				<h2 class="text-xl font-bold">Faculty</h2>
-				<a href="teacher.html"
-					class="px-5 py-2 bg-red-500 text-white font-bold rounded-full text-lg transition-transform transform hover:scale-105">
-					Go to Faculty Page
-				</a>
-			</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 justify-center items-center"
+			id="link-item">
 		</div>
 	</div>
+
+	<script>
+		const linkItem = document.getElementById('link-item');
+
+		const data = [
+			{
+				image: '🧑‍🎓',
+				title: 'Student',
+				link: 'student.html'
+			},
+			{
+				image: '🏫',
+				title: 'Faculty',
+				link: 'teacher.html'
+			},
+			{
+				image: '👨‍🏫',
+				title: 'Navbar',
+				link: 'navbar.html'
+			},
+			{
+				image: '👨‍🏫',
+				title: 'Student Dashboard',
+				link: 'student-dashboard.html'
+			},
+			{
+				image: '👨‍🏫',
+				title: 'Student Academic Resources',
+				link: 'student-academic_resourses.html'
+			},
+		];
+
+		document.addEventListener('DOMContentLoaded', () => {
+			data.forEach((item) => {
+				const div = document.createElement('div');
+				div.classList.add('bg-white/70', 'backdrop-blur-sm', 'p-6', 'rounded-md', 'shadow-lg', 'w-72', 'flex', 'flex-col', 'items-center', 'gap-4');
+				const imageDiv = document.createElement('div');
+				imageDiv.classList.add('w-20', 'h-20', 'rounded-full', 'bg-gray-300', 'flex', 'justify-center', 'items-center', 'text-4xl', 'font-bold', 'text-gray-700');
+				imageDiv.textContent = item.image;
+				const title = document.createElement('h2');
+				title.classList.add('text-xl', 'font-bold');
+				title.textContent = item.title;
+				const link = document.createElement('a');
+				link.href = item.link;
+				link.classList.add('px-5', 'w-full', 'py-2', 'bg-blue-500', 'text-white', 'font-bold', 'rounded-full', 'transition-transform', 'transform', 'hover:scale-105');
+				link.textContent = item.title;
+				div.appendChild(imageDiv);
+				div.appendChild(title);
+				div.appendChild(link);
+				linkItem.appendChild(div);
+			})
+		})
+	</script>
 </body>
 
 </html>
