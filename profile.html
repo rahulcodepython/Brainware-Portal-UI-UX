@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profile</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="shortcut icon" href="assests/image/Brainware-logo.ico" type="favicon/ico">
+	<link rel="stylesheet" href="assests/styles/styles.css" />
+	<script src="assests/js/tailwind.config.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</head>
+
+<body class="bg-blue-50">
+	<!-- Sidebar Toggle Button -->
+	<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
+		aria-controls="sidebar-multi-level-sidebar" type="button"
+		class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+		<span class="sr-only">Open sidebar</span>
+		<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+			xmlns="http://www.w3.org/2000/svg">
+			<path clip-rule="evenodd" fill-rule="evenodd"
+				d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+			</path>
+		</svg>
+	</button>
+
+	<!-- Sidebar -->
+	<aside id="sidebar-multi-level-sidebar"
+		class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+		<div class="h-full px-3 py-4 flex flex-col justify-between">
+			<ul class="space-y-2" id="sidebar-menu">
+				<!-- Sidebar items will be dynamically added here -->
+			</ul>
+
+
+			<!-- Logout Button -->
+			<a href="#" class="flex items-center p-2 text-red-500 rounded-lg hover:bg-red-100 text-xs">
+				<svg class="w-3 h-3 text-red-400 group-hover:text-red-600" fill="none" stroke="currentColor"
+					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+					<path d="M15 18l6-6m0 0l-6-6m6 6H9"></path>
+					<path d="M3 3v18"></path>
+				</svg>
+				<span class="ml-3">Log Out</span>
+			</a>
+	</aside>
+
+	<!-- Main Content -->
+	<div class="sm:ml-52 p-4">
+		<h1 class="text-xl font-bold text-center mb-6">
+			Profile
+		</h1>
+		<div class="bg-white p-4 rounded-md shadow-md text-xs flex flex-col gap-4" id="profile-section">
+		</div>
+	</div>
+
+	<script>
+		const sidebarItems = [
+			{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
+			{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: '#' },
+			{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: '#' },
+			{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: '#' },
+			{ label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: '#' },
+			{ label: 'Online Money Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: '#' },
+			{ label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: '#' },
+			{
+				label: 'More',
+				icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 "/>',
+				collapsible: true,
+				children: [
+					{ label: 'Online Payment', url: '#' },
+					{ label: 'Admission Documents', url: '#' },
+					{ label: 'Online Money Receipt', url: '#' },
+				]
+			}
+		];
+
+		function renderSidebar() {
+			const sidebarContent = document.querySelector('#sidebar-multi-level-sidebar .h-full ul');
+			sidebarContent.innerHTML = sidebarItems.map(item => {
+				if (item.collapsible) {
+					return `
+                <li>
+                    <button type="button"
+                        class="flex items-center w-full p-2 text-xs text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        aria-controls="dropdown-${item.label}" data-collapse-toggle="dropdown-${item.label}">
+                        <svg class="w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+						${item.icon}
+					</svg>
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">${item.label}</span>
+                        <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
+                    <ul id="dropdown-${item.label}" class="hidden py-2 space-y-2">
+                        ${item.children.map(child => `
+                            <li>
+                                <a href="${child.url}"
+                                    class="flex text-xs items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    ${child.label}
+                                </a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </li>
+            `;
+				} else {
+					return `
+					<li>
+				<a href="${item.url}" class="flex text-xs items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+					<svg class="w-4 h-4 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+						${item.icon}
+					</svg>
+					<span class="ms-3">${item.label}</span>
+				</a>
+			</li>
+                
+            `;
+				}
+			}).join('');
+		}
+
+		const profileData = [
+			{
+				label: 'Student Profile',
+				info: [
+					{
+						label: 'Campus',
+						value: 'Barasat',
+						type: 'text',
+					},
+					{
+						label: 'Student Code',
+						value: 'BWU/BCA/23/406',
+						type: 'text',
+					},
+					{
+						label: 'University Email',
+						value: 'bwubca23406@brainwareuniversity.ac.in',
+						type: 'email',
+					},
+					{
+						label: 'Batch Code',
+						value: 'BCA-2023-SEC-G (Gr - 2)',
+						type: 'text',
+					},
+					{
+						label: 'First Name',
+						value: 'RAHUL',
+						type: 'text',
+					},
+					{
+						label: 'Middle Name',
+						value: '',
+						type: 'text',
+					},
+					{
+						label: 'Surname',
+						value: 'DAS',
+						type: 'text',
+					},
+					{
+						label: 'Residence Phone',
+						value: '',
+						type: 'number',
+					},
+					{
+						label: 'Mobile 1',
+						value: '9775150082',
+						type: 'number',
+					},
+					{
+						label: 'Mobile 2',
+						value: '9609337209',
+						type: 'number',
+					},
+					{
+						label: 'Blood Group',
+						value: 'NA',
+						type: 'select',
+						options: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-', 'NA'],
+					},
+					{
+						label: 'Height',
+						value: '0',
+						type: 'number',
+					},
+					{
+						label: 'Weight',
+						value: '0',
+						type: 'number',
+					},
+					{
+						label: 'Date of Birth',
+						value: '2004-10-21',
+						type: 'date',
+					},
+					{
+						label: 'Place of Birth',
+						value: '',
+						type: 'text',
+					},
+					{
+						label: 'Career Goal',
+						value: 'Software Engineer',
+						type: 'text',
+					},
+					{
+						label: 'Religion',
+						value: 'Hinduism',
+						type: 'select',
+						options: ['Hinduism', 'Islam', 'Christianity', 'Buddhism', 'Judaism', 'Other'],
+					},
+					{
+						label: 'Caste',
+						value: 'General',
+						type: 'text',
+					},
+					{
+						label: 'Nationality',
+						value: 'Indian',
+						type: 'text',
+					},
+					{
+						label: 'Major Disease',
+						value: '',
+						type: 'text',
+					},
+					{
+						label: 'Why Choose This Course',
+						value: 'Following My Passion',
+						type: 'text',
+					},
+					{
+						label: 'Student ABC ID',
+						value: '299287290864',
+						type: 'text',
+					},
+					{
+						label: 'Hobby',
+						value: 'Acting',
+						type: 'checkbox',
+						options: ["Acting", "Cooking", "Dance", "Drama", "Embroidery", "Indoor Game", "Movie", "Music", "Painting", "Photography", "Poem", "Tubbing"],
+					}
+				]
+			},
+			{
+				label: 'Present Address Details',
+				info: [
+					{
+						label: 'Present Address',
+						value: 'KANKPUL, ASHOKENAGAR KALYANGARH (M) NORTH 24 PGS, WEST BENGAL 743272',
+						type: 'textarea'
+					},
+					{
+						label: 'City / Town',
+						value: 'KANKPUL',
+						type: 'text'
+					},
+					{
+						label: 'Area',
+						value: 'KALYANGARH',
+						type: 'text'
+					},
+					{
+						label: 'District (for W.B only)',
+						value: 'North 24 Parganas',
+						type: 'text'
+					},
+					{
+						label: 'P.O',
+						value: 'KANKPUL',
+						type: 'text'
+					},
+					{
+						label: 'P.S',
+						value: 'ASHOKENAGAR',
+						type: 'text'
+					},
+					{
+						label: 'Aadhar Card No.',
+						value: '331513203666',
+						type: 'number'
+					},
+					{
+						label: 'State',
+						value: 'West Bengal',
+						type: 'text'
+					},
+					{
+						label: 'Pin',
+						value: '743272',
+						type: 'number'
+					}
+				]
+			},
+			{
+				label: 'Permanent Address Details',
+				info: [
+					{
+						label: 'Permanent Address',
+						value: 'KANKPUL, ASHOKENAGAR KALYANGARH (M) NORTH 24 PGS, WEST BENGAL 743272',
+						type: 'textarea'
+					},
+					{
+						label: 'City / Town',
+						value: 'KANKPUL',
+						type: 'text'
+					},
+					{
+						label: 'District (for W.B only)',
+						value: 'North 24 Parganas',
+						type: 'text'
+					},
+					{
+						label: 'P.O',
+						value: 'KANKPUL',
+						type: 'text'
+					},
+					{
+						label: 'P.S',
+						value: 'ASHOKENAGAR',
+						type: 'text'
+					},
+					{
+						label: 'Aadhar Card No.',
+						value: '331513203666',
+						type: 'number'
+					},
+					{
+						label: 'State',
+						value: 'West Bengal',
+						type: 'text'
+					},
+					{
+						label: 'Pin',
+						value: '743272',
+						type: 'number'
+					}
+				]
+			},
+			{
+				label: 'Contact Details',
+				info: [
+					{
+						label: 'Email',
+						value: 'rd21102004@gmail.com',
+						type: 'email'
+					},
+					{
+						label: 'FB Account No',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Whatsapp No',
+						value: '9775150082',
+						type: 'number'
+					}
+				]
+			},
+			{
+				label: 'Qualification Details',
+				info: [
+					{
+						label: 'Institution of Class X',
+						value: 'KALYANGARH BIDHANCHANDRA VIDYAPITH',
+						type: 'text'
+					},
+					{
+						label: 'Board of Class X',
+						value: 'WEST BENGAL BOARD',
+						type: 'text'
+					},
+					{
+						label: 'Medium of Class X',
+						value: 'Bengali',
+						type: 'text'
+					},
+					{
+						label: 'Percentage of Class X',
+						value: '91.14',
+						type: 'number'
+					},
+					{
+						label: 'Year of Passing',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Institution of Class XII',
+						value: 'KALYANGARH VIDYAMANDIR',
+						type: 'text'
+					},
+					{
+						label: 'Board of Class XII',
+						value: 'WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION',
+						type: 'text'
+					},
+					{
+						label: 'Medium of Class XII',
+						value: 'Bengali',
+						type: 'text'
+					},
+					{
+						label: 'Percentage of Class XII',
+						value: '82.2',
+						type: 'number'
+					},
+					{
+						label: 'Year of Passing',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Institution of Graduation',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Board of Graduation',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Medium of Graduation',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Percentage of Graduation',
+						value: '0',
+						type: 'number'
+					},
+					{
+						label: 'Year of Passing',
+						value: '',
+						type: 'text'
+					}
+				]
+			},
+			{
+				label: 'Guardian Details',
+				info: [
+					{
+						label: 'Father\'s Name',
+						value: 'Mr. PRADIP DAS',
+						type: 'text'
+					},
+					{
+						label: 'Father\'s Mobile',
+						value: '9563066913',
+						type: 'number'
+					},
+					{
+						label: 'Father\'s E-Mail',
+						value: 'pdas34563@gmail.com',
+						type: 'email'
+					},
+					{
+						label: 'Father\'s Profession',
+						value: 'Self-employed',
+						type: 'text'
+					},
+					{
+						label: 'Mother\'s Name',
+						value: 'Mrs. ARPITA DAS',
+						type: 'text'
+					},
+					{
+						label: 'Mother\'s Contact No',
+						value: '9609337209',
+						type: 'number'
+					},
+					{
+						label: 'Mother\'s Profession',
+						value: 'Housewife',
+						type: 'text'
+					},
+					{
+						label: 'Mother\'s E-Mail',
+						value: 'pdas34563@gmail.com',
+						type: 'email'
+					},
+					{
+						label: 'No Of Brother(s)',
+						value: '0',
+						type: 'number'
+					},
+					{
+						label: 'No Of Sister(s)',
+						value: '0',
+						type: 'number'
+					},
+					{
+						label: 'Hostel Border',
+						value: '',
+						type: 'radio',
+						options: ['Yes', 'No']
+					}
+				]
+			},
+			{
+				label: 'Local Guardian Details',
+				info: [
+					{
+						label: 'Local Guardian Name',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Local Guardian Contact',
+						value: '',
+						type: 'text'
+					},
+					{
+						label: 'Local Guardian Mobile',
+						value: '',
+						type: 'number'
+					}
+				]
+			}
+		];
+
+		function renderProfile() {
+			const profileSection = document.querySelector('#profile-section');
+			profileSection.innerHTML = profileData.map(item => {
+				return `
+            <div>
+                <div class="text-base pb-2">
+                    ${item.label}
+                </div>
+                <hr />
+                <div class="grid grid-cols-2 gap-4 p-4 mt-2">
+                    ${item.info.map(info => {
+					return `
+                            <div class="grid grid-cols-[auto,1fr] ${info.type === 'checkbox' && 'col-span-2'} gap-4 items-center">
+                                <div>
+                                    ${info.label}:
+                                </div>
+								${info.type === 'select' ?
+							`<select class="border border-gray-300 rounded-sm text-xs py-1 px-1.5 focus:outline-none focus:ring-0" value="${info.value}" disabled>
+										${info.options.map(option => {
+								return `<option value="${option}" ${option === info.value && 'selected'}>${option}</option>`
+							}).join('')}
+									</select>`
+							: info.type === 'checkbox' ? `
+							<div class="flex items-center gap-3 flex-wrap">
+								${info.options.map(option => {
+								return `<div class="flex items-center gap-1">
+										<input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" ${info.value.includes(option) && 'checked'} disabled>
+										<label class="text-xs">${option}</label>
+									</div>`
+							}).join('')}
+							</div>
+							`
+								: `<input type="${info.type}"
+							class="border border-gray-300 rounded-sm text-xs py-1 px-1.5 focus:outline-none focus:ring-0"
+							value="${info.value}"
+							readonly />`
+						}
+                            </div>
+                        `;
+				}).join('')}
+                </div>
+            </div>
+        `;
+			}).join('');
+		}
+
+		// Initialize the sidebar when the DOM is loaded
+		document.addEventListener('DOMContentLoaded', () => {
+			renderSidebar();
+			renderProfile();
+			// Re-initialize Flowbite components after dynamic rendering
+			if (window.initFlowbite) window.initFlowbite();
+		});
+
+	</script>
+
+</body>
+
+</html>
