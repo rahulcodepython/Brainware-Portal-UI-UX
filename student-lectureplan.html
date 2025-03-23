@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Resource</title>
+    <title>Lecture Plan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="assests/image/Brainware-logo.ico" type="favicon/ico">
     <link rel="stylesheet" href="assests/styles/styles.css" />
@@ -53,41 +53,54 @@
 
 <!-- Main Content -->
 <div class="p-6 sm:ml-64">
-    <h1 class="text-center text-2xl font-bold text-gray-800 mb-6">Academic Resources</h1>
+    <h1 class="text-center text-2xl font-bold text-gray-800 mb-6">Lecture Plan</h1>
     <div class="flex flex-wrap justify-center gap-4 mb-4">
         <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
-            <option>Subject</option>
-        </select>
-        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
             <option>Semester</option>
+            <option>Semester 1</option>
+            <option>Semester 2</option>
         </select>
         <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
-            <option>Resource Type</option>
+            <option>Course</option>
         </select>
     </div>
     
     <div class="overflow-x-auto">
-        <table class="w-full border border-gray-300 shadow-md rounded-lg">
+        <table class="w-full border border-gray-300 shadow-md rounded-lg text-xs">
             <thead>
                 <tr class="bg-blue-500 text-white">
-                    <th class="px-4 py-2">Resource Type</th>
-                    <th class="px-4 py-2">Teacher</th>
-                    <th class="px-4 py-2">Course Code</th>
-                    <th class="px-4 py-2">Module</th>
-                    <th class="px-4 py-2">Upload Date</th>
-                    <th class="px-4 py-2">Attachment-1</th>
-                    <th class="px-4 py-2">Attachment-2</th>
+                    <th class="px-4 py-2">Course</th>
+                    <th class="px-4 py-2">Module No</th>
+                    <th class="px-4 py-2">Lecture No</th>
+                    <th class="px-4 py-2">Group</th>
+                    <th class="px-4 py-2">Topic Covered</th>
+                    <th class="px-4 py-2">Proposed Date</th>
+                    <th class="px-4 py-2">Learning Methodology</th>
+                    <th class="px-4 py-2">Reading Reference</th>
+                    <th class="px-4 py-2">Focused CO</th>
+                    <th class="px-4 py-2">Selected Faculty</th>
+                    <th class="px-4 py-2">Lecture Taken</th>
+                    <th class="px-4 py-2">Actual Date</th>
+                    <th class="px-4 py-2">Methodology Used</th>
+                    <th class="px-4 py-2">Actual Faculty</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="text-center bg-white border-b border-gray-200">
-                    <td class="px-4 py-2">Example Type</td>
-                    <td class="px-4 py-2">John Doe</td>
-                    <td class="px-4 py-2">CS101</td>
-                    <td class="px-4 py-2">Module 1</td>
-                    <td class="px-4 py-2">2025-03-22</td>
-                    <td class="px-4 py-2 text-blue-500 hover:underline cursor-pointer">Download</td>
-                    <td class="px-4 py-2 text-blue-500 hover:underline cursor-pointer">Download</td>
+                    <td class="px-4 py-2">Course Name</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">Group 2</td>
+                    <td class="px-4 py-2">Topic 1</td>
+                    <td class="px-4 py-2">2025-03-01</td>
+                    <td class="px-4 py-2">Methodology A</td>
+                    <td class="px-4 py-2">Reference XYZ</td>
+                    <td class="px-4 py-2">CO1</td>
+                    <td class="px-4 py-2">Dr. Jayanta Aich</td>
+                    <td class="px-4 py-2">Yes</td>
+                    <td class="px-4 py-2">2025-03-05</td>
+                    <td class="px-4 py-2">Methodology B</td>
+                    <td class="px-4 py-2">Dr. Jayanta Aich</td>
                 </tr>
             </tbody>
         </table>
