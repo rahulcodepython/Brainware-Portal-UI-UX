@@ -50,51 +50,57 @@
 
 
 <!-- Main Content -->
-<div class="p-6 sm:ml-64">
-
-    <div class="text-gray-600 text-xs mb-3">
-        <a href="student-dashboard.html" class="flex items-center text-blue-600 hover:underline">
-            Dashboard
-        </a>
-        <span class="mx-2 text-gray-400">></span>
-        <span class="text-gray-800 font-medium">Academic Resource</span>
+<div class="p-2 sm:ml-52">
+        
+    <div class="grid grid-cols-3 items-center mb-4">
+        <!-- Breadcrumb on the Left -->
+        <div class="text-gray-600 text-xs flex items-center">
+            <a href="student-dashboard.html" class="text-blue-600 hover:underline">Dashboard</a>
+            <span class="mx-1 text-gray-400">></span>
+            <span class="text-gray-800 font-medium">Academic Resource</span>
+        </div>
+    
+        <!-- Heading in the Center -->
+        <h1 class="text-center text-xl sm:text-2xl font-bold text-gray-800">Academic Resources</h1>
+    
+        <!-- Empty Div for Alignment (Optional) -->
+        <div></div>
     </div>
-
-    <h1 class="text-center text-2xl font-bold text-gray-800 mb-6">Academic Resources</h1>
-    <div class="flex flex-wrap justify-center gap-4 mb-4">
-        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
+    
+    <div class="flex flex-wrap justify-center gap-2 mb-2 w-full text-xs">
+        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm flex-1 min-w-[100px]">
             <option>Subject</option>
         </select>
-        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
+        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm flex-1 min-w-[100px]">
             <option>Semester</option>
         </select>
-        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
+        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm flex-1 min-w-[100px]">
             <option>Resource Type</option>
         </select>
     </div>
     
     <div class="overflow-x-auto">
-        <table class="w-full border border-gray-300 shadow-md rounded-lg">
+        <table class="w-full border border-gray-400 text-xs sm:text-sm">
             <thead>
                 <tr class="bg-blue-500 text-white">
-                    <th class="px-4 py-2">Resource Type</th>
-                    <th class="px-4 py-2">Teacher</th>
-                    <th class="px-4 py-2">Course Code</th>
-                    <th class="px-4 py-2">Module</th>
-                    <th class="px-4 py-2">Upload Date</th>
-                    <th class="px-4 py-2">Attachment-1</th>
-                    <th class="px-4 py-2">Attachment-2</th>
+                    <th class="px-2 py-1 border">Resource Type</th>
+                    <th class="px-2 py-1 border">Teacher</th>
+                    <th class="px-2 py-1 border">Course Code</th>
+                    <th class="px-2 py-1 border">Module</th>
+                    <th class="px-2 py-1 border">Upload Date</th>
+                    <th class="px-2 py-1 border">Attachment-1</th>
+                    <th class="px-2 py-1 border">Attachment-2</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="text-center bg-white border-b border-gray-200">
-                    <td class="px-4 py-2">Example Type</td>
-                    <td class="px-4 py-2">John Doe</td>
-                    <td class="px-4 py-2">CS101</td>
-                    <td class="px-4 py-2">Module 1</td>
-                    <td class="px-4 py-2">2025-03-22</td>
-                    <td class="px-4 py-2 text-blue-500 hover:underline cursor-pointer">Download</td>
-                    <td class="px-4 py-2 text-blue-500 hover:underline cursor-pointer">Download</td>
+                    <td class="px-2 py-1 border">Example Type</td>
+                    <td class="px-2 py-1 border">John Doe</td>
+                    <td class="px-2 py-1 border">CS101</td>
+                    <td class="px-2 py-1 border">Module 1</td>
+                    <td class="px-2 py-1 border">2025-03-22</td>
+                    <td class="px-2 py-1 border text-blue-500 hover:underline cursor-pointer">Download</td>
+                    <td class="px-2 py-1 border text-blue-500 hover:underline cursor-pointer">Download</td>
                 </tr>
             </tbody>
         </table>
@@ -103,7 +109,7 @@
 
     <script>
         const sidebarItems = [
-		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
+		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: 'student-profile.html' },
 		{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
 		{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
 		{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },

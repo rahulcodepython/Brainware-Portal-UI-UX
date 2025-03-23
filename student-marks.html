@@ -54,7 +54,7 @@ class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-f
         <!-- Main Content -->
     <div class="sm:ml-64 p-6">
 
-        <div class="text-gray-600 text-xs mb-3">
+        <div class="text-gray-600 text-xs mb-3 flex">
             <a href="student-dashboard.html" class="flex items-center text-blue-600 hover:underline">
                 Dashboard
             </a>
@@ -65,7 +65,7 @@ class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-f
         <h1 class="text-center text-2xl font-bold mb-4">Marks</h1>
         
         <div class="mb-4 flex flex-wrap gap-2 justify-center">
-            <select class="p-2 bg-white border-gray-200 text-gray-800 rounded w-full sm:w-auto">
+            <select class="p-2 border border-gray-300 rounded w-full max-w-[400px] text-sm">
                 <option>Select Semester</option>
                 <option>Semester 1</option>
                 <option>Semester 2</option>
@@ -74,9 +74,9 @@ class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-f
         </div>
 
         <div class="overflow-x-auto">
-            <table class="w-full bg-white border border-gray-300 text-sm sm:text-base">
+            <table class="w-full bg-white border border-gray-300 sm:text-base">
                 <thead>
-                    <tr class="bg-blue-500 text-white">
+                    <tr class="bg-blue-500 text-white text-sm">
                         <th class="px-4 py-2">Course Name</th>
                         <th class="px-4 py-2">Course Code</th>
                         <th class="px-4 py-2">Assignment 1</th>
@@ -88,7 +88,7 @@ class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-f
                     </tr>
                 </thead>
                 <tbody class="text-gray-800">
-                    <tr class="text-center">
+                    <tr class="text-center text-sm">
                         <td class="px-4 py-2">Mathematics</td>
                         <td class="px-4 py-2">MTH101</td>
                         <td class="px-4 py-2">18/20</td>
@@ -97,7 +97,7 @@ class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-f
                         <td class="px-4 py-2">15/20</td>
                         <td class="px-4 py-2">8/10</td>
                     </tr>
-                    <tr class="text-center">
+                    <tr class="text-center text-sm">
                         <td class="px-4 py-2">Physics</td>
                         <td class="px-4 py-2">PHY102</td>
                         <td class="px-4 py-2">16/20</td>
@@ -114,7 +114,7 @@ class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-f
     <!-- Script Part -->
     <script>
 		const sidebarItems = [
-		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
+		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: 'student-profile.html' },
 		{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
 		{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
 		{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },

@@ -55,7 +55,7 @@
 <div class="p-6 sm:ml-64">
 
 
-    <div class="text-gray-600 text-xs mb-3">
+    <div class="text-gray-600 text-xs mb-3 flex">
         <a href="student-dashboard.html" class="flex items-center text-blue-600 hover:underline">Dashboard
         </a>
         <span class="mx-2 text-gray-400">></span>
@@ -64,13 +64,11 @@
 
 
     <h1 class="text-center text-2xl font-bold text-gray-800 mb-3">Lecture Plan</h1>
-    <div class="flex flex-wrap justify-center gap-4 mb-4">
-        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
+    <div class="flex flex-wrap justify-center gap-4 mb-4 w-full text-sm">
+        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm flex-1 min-w-[150px]">
             <option>Semester</option>
-            <option>Semester 1</option>
-            <option>Semester 2</option>
         </select>
-        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm w-full sm:w-auto">
+        <select class="p-2 bg-white border border-gray-300 rounded shadow-sm flex-1 min-w-[150px]">
             <option>Course</option>
         </select>
     </div>
@@ -119,7 +117,7 @@
 
     <script>
         const sidebarItems = [
-		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
+		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: 'student-profile.html' },
 		{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
 		{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
 		{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },

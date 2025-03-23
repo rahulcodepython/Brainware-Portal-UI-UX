@@ -13,7 +13,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </head>
 
-<body class="bg-blue-50">
+<body class="bg-gray-100">
 	<!-- Sidebar Toggle Button -->
 	<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
 		aria-controls="sidebar-multi-level-sidebar" type="button"
@@ -48,23 +48,35 @@
 	</aside>
 
 	<!-- Main Content -->
+
 	<div class="sm:ml-52 p-4">
-		<h1 class="text-xl font-bold text-center mb-6">
-			Profile
-		</h1>
+
+		<div class="flex items-center justify-between mb-6">
+			<div class="text-gray-600 text-xs flex self-start">
+				<a href="student-dashboard.html" class="flex items-center text-blue-600 hover:underline">
+					Dashboard
+				</a>
+				<span class="mx-2 text-gray-400">></span>
+				<span class="text-gray-800 font-medium">Profile</span>
+			</div>
+		
+			<h1 class="text-xl font-bold text-center flex-grow">
+				Profile
+			</h1>
+		</div>
 		<div class="bg-white p-4 rounded-md shadow-md text-xs flex flex-col gap-4" id="profile-section">
 		</div>
 	</div>
 
 	<script>
 		const sidebarItems = [
-			{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
-			{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: '#' },
-			{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: '#' },
-			{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: '#' },
-			{ label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: '#' },
-			{ label: 'Online Money Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: '#' },
-			{ label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: '#' },
+		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: 'student-profile.html' },
+		{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
+		{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
+		{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },
+		{ label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: 'student-academicResourse.html' },
+		{ label: 'Online Payment Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: 'student-paymentReceipt.html' },
+		{ label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: 'student-document.html' },
 			{
 				label: 'More',
 				icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 "/>',
