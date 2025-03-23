@@ -2,54 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="assests/image/Brainware-logo.ico" type="favicon/ico">
-    <link rel="stylesheet" href="assests/styles/styles.css" />
-    <script src="assests/js/tailwind.config.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attendance</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="shortcut icon" href="assests/image/Brainware-logo.ico" type="favicon/ico">
+	<link rel="stylesheet" href="assests/styles/styles.css" />
+	<script src="assests/js/tailwind.config.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </head>
 
 
 <body class="bg-gray-100">
 
-    <!-- Sidebar Toggle Button -->
-    <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
-        aria-controls="sidebar-multi-level-sidebar" type="button"
-        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-        <span class="sr-only">Open sidebar</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-            </path>
-        </svg>
-    </button>
+	<!-- Sidebar Toggle Button -->
+	<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
+		aria-controls="sidebar-multi-level-sidebar" type="button"
+		class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+		<span class="sr-only">Open sidebar</span>
+		<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+			xmlns="http://www.w3.org/2000/svg">
+			<path clip-rule="evenodd" fill-rule="evenodd"
+				d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+			</path>
+		</svg>
+	</button>
 
-    <!-- Sidebar -->
-    <aside id="sidebar-multi-level-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <div class="h-full px-3 py-4 flex flex-col justify-between">
-            <ul class="space-y-2" id="sidebar-menu">
-                <!-- Sidebar items will be dynamically added here -->
-            </ul>
+	<!-- Sidebar -->
+	<aside id="sidebar-multi-level-sidebar"
+		class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+		<div class="h-full px-3 py-4 flex flex-col justify-between">
+			<ul class="space-y-2" id="sidebar-menu">
+				<!-- Sidebar items will be dynamically added here -->
+			</ul>
 
 
-            <!-- Logout Button -->
-            <div class="p-4">
-                <a href="#" class="flex items-center p-2 text-red-500 rounded-lg hover:bg-red-100">
-                    <svg class="w-5 h-5 text-red-400 group-hover:text-red-600" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                        <path d="M15 18l6-6m0 0l-6-6m6 6H9"></path>
-                        <path d="M3 3v18"></path>
-                    </svg>
-                    <span class="ml-3">Log Out</span>
-                </a>
-            </div>
-    </aside>
+			<!-- Logout Button -->
+			<div class="p-4">
+				<a href="#" class="flex items-center p-2 text-red-500 rounded-lg hover:bg-red-100">
+					<svg class="w-5 h-5 text-red-400 group-hover:text-red-600" fill="none" stroke="currentColor"
+						stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+						<path d="M15 18l6-6m0 0l-6-6m6 6H9"></path>
+						<path d="M3 3v18"></path>
+					</svg>
+					<span class="ml-3">Log Out</span>
+				</a>
+			</div>
+	</aside>
 
 
 
@@ -57,118 +57,110 @@
     <!-- Main Content -->
     <div class="p-6 sm:ml-64">
 
-        <div class="text-gray-600 text-xs">
-            <a href="student-dashboard.html" class="flex items-center text-blue-600 hover:underline">Dashboard
-            </a>
-            <span class="mx-2 text-gray-400">></span>
-            <span class="text-gray-800 font-medium">Attendance</span>
-        </div>
+		<!-- Top Bar -->
+		<div class="flex justify-between items-center mb-4">
+			<div></div>
+			<div class="relative">
+				<button id="dropdownButton" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Advance
+					Search</button>
+				<div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-10">
+					<h3 class="text-lg font-bold mb-4">Advance Search</h3>
 
-        <!-- Top Bar -->
-        <div class="flex justify-between items-center mb-4">
-            <div></div>
-            <div class="relative">
-                <button id="dropdownButton" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Advance Search</button>
-                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-10">
-                    <h3 class="text-lg font-bold mb-4">Advance Search</h3>
-                    
-                    <!-- Semester Dropdown -->
-                    <select class="w-full p-2 border border-gray-300 rounded mb-2">
-                        <option>Select Semester</option>
-                        <option>Semester 1</option>
-                        <option>Semester 2</option>
-                        <option>Semester 3</option>
-                        <option>Semester 4</option>
-                        <option>Semester 5</option>
-                        <option>Semester 6</option>
-                    </select>
+					<!-- Semester Dropdown -->
+					<select class="w-full p-2 border border-gray-300 rounded mb-2">
+						<option>Select Semester</option>
+						<option>Semester 1</option>
+						<option>Semester 2</option>
+						<option>Semester 3</option>
+						<option>Semester 4</option>
+						<option>Semester 5</option>
+						<option>Semester 6</option>
+					</select>
 
-                    <!-- Course Dropdown -->
-                    <select class="w-full p-2 border border-gray-300 rounded mb-2">
-                        <option>Select Course</option>
-                        <option>DBMS</option>
-                        <option>Operating System</option>
-                        <option>Computer Networks</option>
-                        <option>Software Engineering</option>
-                    </select>
+					<!-- Course Dropdown -->
+					<select class="w-full p-2 border border-gray-300 rounded mb-2">
+						<option>Select Course</option>
+						<option>DBMS</option>
+						<option>Operating System</option>
+						<option>Computer Networks</option>
+						<option>Software Engineering</option>
+					</select>
 
                     <!-- Date Picker -->
-                    <label for="date">From</label>
-                    <input type="date" class="w-full p-2 border border-gray-300 rounded mb-4">
-                    <label for="date">To</label>
                     <input type="date" class="w-full p-2 border border-gray-300 rounded mb-4">
 
-                    <!-- Apply Button -->
-                    <button onclick="toggleDropdown()" class="px-4 py-2 bg-blue-500 text-white rounded w-full">Apply</button>
-                </div>
-            </div>
-        </div>
+					<!-- Apply Button -->
+					<button onclick="toggleDropdown()"
+						class="px-4 py-2 bg-blue-500 text-white rounded w-full">Apply</button>
+				</div>
+			</div>
+		</div>
 
-        <!-- Header Section -->
-        <div class="flex flex-col items-center gap-4 mb-6">
-            <h1 class="text-2xl font-bold text-center">Attendance</h1>
-            <select class="p-2 border border-gray-300 rounded w-60">
-                <option>Select Subject</option>
-            </select>
-        </div>
+		<!-- Header Section -->
+		<div class="flex flex-col items-center gap-4 mb-6">
+			<h1 class="text-2xl font-bold text-center">Attendance</h1>
+			<select class="p-2 border border-gray-300 rounded w-60">
+				<option>Select Subject</option>
+			</select>
+		</div>
 
-        <!-- Table -->
-        <div class="w-full px-6 overflow-x-auto">
-            <table class="w-full border-collapse min-w-[600px]">
-                <thead>
-                    <tr class="bg-blue-500 text-white text-center">
-                        <th class="p-3">Course Name</th>
-                        <th class="p-3">Course Code</th>
-                        <th class="p-3">Attended / Total Classes</th>
-                        <th class="p-3">Attendance %</th>
-                        <th class="p-3">Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="bg-gray-100 text-black bg-white border-b border-gray-200 text-center">
-                        <td class="p-3">Example Course</td>
-                        <td class="p-3">ABC123</td>
-                        <td class="p-3">10 / 15</td>
-                        <td class="p-3">66.7%</td>
-                        <td class="p-3">2025-03-22</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+		<!-- Table -->
+		<div class="w-full px-6 overflow-x-auto">
+			<table class="w-full border-collapse min-w-[600px]">
+				<thead>
+					<tr class="bg-blue-500 text-white text-center">
+						<th class="p-3">Course Name</th>
+						<th class="p-3">Course Code</th>
+						<th class="p-3">Attended / Total Classes</th>
+						<th class="p-3">Attendance %</th>
+						<th class="p-3">Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="bg-gray-100 text-black border-b border-gray-200 text-center">
+						<td class="p-3">Example Course</td>
+						<td class="p-3">ABC123</td>
+						<td class="p-3">10 / 15</td>
+						<td class="p-3">66.7%</td>
+						<td class="p-3">2025-03-22</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 
-    <!-- Scripts -->
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById("dropdownMenu");
-            dropdown.classList.toggle("hidden");
-        }
+	<!-- Scripts -->
+	<script>
+		function toggleDropdown() {
+			var dropdown = document.getElementById("dropdownMenu");
+			dropdown.classList.toggle("hidden");
+		}
 
-        document.getElementById("dropdownButton").addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevent closing immediately when clicking the button
-            toggleDropdown();
-        });
+		document.getElementById("dropdownButton").addEventListener("click", function (event) {
+			event.stopPropagation(); // Prevent closing immediately when clicking the button
+			toggleDropdown();
+		});
 
-        document.addEventListener("click", function (event) {
-            var dropdown = document.getElementById("dropdownMenu");
-            if (!dropdown.contains(event.target) && !event.target.matches("#dropdownButton")) {
-                dropdown.classList.add("hidden");
-            }
-        });
+		document.addEventListener("click", function (event) {
+			var dropdown = document.getElementById("dropdownMenu");
+			if (!dropdown.contains(event.target) && !event.target.matches("#dropdownButton")) {
+				dropdown.classList.add("hidden");
+			}
+		});
 
-        const sidebarItems = [
-            { label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
-            { label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
-            { label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
-            { label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },
-            { label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: 'student-academicResourse.html' },
-            { label: 'Online Payment Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: 'student-paymentReceipt.html' },
-            { label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: 'student-document.html' }
-        ];
+		const sidebarItems = [
+			{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
+			{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
+			{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
+			{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },
+			{ label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: 'student-academicResourse.html' },
+			{ label: 'Online Payment Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: 'student-paymentReceipt.html' },
+			{ label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: 'student-document.html' }
+		];
 
-        function renderSidebar() {
-            const sidebarMenu = document.getElementById('sidebar-menu');
-            sidebarMenu.innerHTML = sidebarItems.map(item => `
+		function renderSidebar() {
+			const sidebarMenu = document.getElementById('sidebar-menu');
+			sidebarMenu.innerHTML = sidebarItems.map(item => `
 			<li>
 				<a href="${item.url}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 					<svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -178,15 +170,15 @@
 				</a>
 			</li>
 		`).join('');
-        }
+		}
 
-        function logout() {
-            alert("Logging out...");
-            window.location.href = "student.html"; // Redirect to login page
-        }
+		function logout() {
+			alert("Logging out...");
+			window.location.href = "student.html"; // Redirect to login page
+		}
 
-        renderSidebar();
-    </script>
+		renderSidebar();
+	</script>
 
 </body>
 
