@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dashboard</title>
+	<title>Online Payment Receipt</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="shortcut icon" href="assests/image/Brainware-logo.ico" type="favicon/ico">
 	<link rel="stylesheet" href="assests/styles/styles.css" />
@@ -13,8 +13,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </head>
 
-<body class="bg-blue-50">
-	<!-- Sidebar Toggle Button -->
+<body class="bg-gray-100">
+    <!-- Sidebar Toggle Button -->
     <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
         aria-controls="sidebar-multi-level-sidebar" type="button"
         class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -48,16 +48,49 @@
         </div>
     </aside>
 
-	<script>
+
+<!-- Main Content -->
+<div class="sm:ml-64 p-6">
+    <!-- Header -->
+        <h1 class="text-center text-2xl font-bold mb-4">Online Payment Receipts</h1>
+
+    <!-- Payment Receipt Section -->
+    <div class="mt-6 flex flex-col items-center">
+        <!-- Semester Selection & Download Button -->
+        <div class="w-full max-w-2xl flex justify-between items-center bg-white p-4 shadow rounded m-4">
+            <span class="text-gray-700 font-medium">Semester 1</span>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Download</button>
+        </div>
+
+        <div class="w-full max-w-2xl flex justify-between items-center bg-white p-4 shadow rounded m-4">
+            <span class="text-gray-700 font-medium">Semester 3</span>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Download</button>
+        </div>
+
+        <div class="w-full max-w-2xl flex justify-between items-center bg-white p-4 shadow rounded m-4">
+            <span class="text-gray-700 font-medium">Semester 2</span>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Download</button>
+        </div>
+
+        <div class="w-full max-w-2xl flex justify-between items-center bg-white p-4 shadow rounded m-4">
+            <span class="text-gray-700 font-medium">Semester 4</span>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Download</button>
+        </div>
+        
+    </div>
+</div>
+
+
+    <script>
 		const sidebarItems = [
-		{ label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
-		{ label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: '#' },
-		{ label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: '#' },
-		{ label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: '#' },
-		{ label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: '#' },
-		{ label: 'Online Money Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: '#' },
-		{ label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: '#' }
-	];
+            { label: 'Profile', icon: '<path d="M10 2a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2 18a6 6 0 1 1 12 0z"/>', url: '#' },
+            { label: 'Attendance', icon: '<path d="M16 2h-3V0h-2v2H9V0H7v2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V7h12z"/>', url: 'student-attendance.html' },
+            { label: 'Marks', icon: '<path d="M3 3h18v2H3zm0 4h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/>', url: 'student-marks.html' },
+            { label: 'Lecture Plan', icon: '<path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm2 2v16h12V4zm2 2h8v2h-8zm0 4h8v2h-8zm0 4h8v2h-8z"/>', url: 'student-lectureplan.html' },
+            { label: 'Academic Resource', icon: '<path d="M4 2h16v16H4z"/><path d="M6 4h12v12H6z"/>', url: 'student-academicResourse.html' },
+            { label: 'Online Payment Receipt', icon: '<path d="M12 1a10 10 0 1 0 10 10A10 10 0 0 0 12 1zm3 14H9v-2h6zm0-4H9V9h6z"/>', url: 'student-paymentReceipt.html' },
+            { label: 'Admission Documents', icon: '<path d="M6 2h8l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 8h-4v4h4zm0-6H6v2h6z"/>', url: 'student-document.html' }
+        ];
 
 	function renderSidebar() {
 		const sidebarMenu = document.getElementById('sidebar-menu');
@@ -75,12 +108,11 @@
 
 	function logout() {
 		alert("Logging out...");
-		window.location.href = "/login"; // Redirect to login page
+		window.location.href = "student.html"; // Redirect to login page
 	}
 
 	renderSidebar();
 	</script>
-
 </body>
 
 </html>
