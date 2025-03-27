@@ -1,0 +1,102 @@
+users [icon: user, color: blue] {
+  id string pk
+  student_code string unique
+  password string
+}
+
+profile [icon: user-check, color: red] {
+  user_id string pk fk > users.id
+  email string
+  name string
+  total_attendance number
+  sgpa float
+  abcid number
+  registration_number number
+  roll_number number
+  enrolled_program string fk > program.id
+}
+
+marks [icon: file, color: green] {
+  id string pk
+  user_id string fk > users.id
+  program_semester_id string fk > program_semesters.id
+  assignment1 number
+  assignment2 number
+  ppt number
+  class_test1 number
+  class_test2 number
+  additional number
+  semester_marks number
+}
+
+program [icon: pie-chart, color: yellow] {
+  id string pk
+  name string
+  code string
+  semester_no number
+  total_enrollment_student number
+}
+
+course [icon: book, color: lime] {
+  id string pk
+  name string
+  code string
+}
+
+program_courses [icon: link, color: cyan] {
+  id string pk
+  program_id string fk > program.id
+  course_id string fk > course.id
+}
+
+program_semesters [icon: calendar, color: purple] {
+  id string pk
+  semester_no number
+  program_id string fk > program.id
+}
+
+course_semesters [icon: list, color: orange] {
+  id string pk
+  course_id string fk > course.id
+  program_semester_id string fk > program_semesters.id
+}
+
+academic_resources [icon: folder, color: teal] {
+  id string pk
+  resource_type enum ['Class Note', 'Assignment', 'Lab Manual', 'Practice Set', 'Presentation Topic', 'Academic Syllabus']
+  program_course_id string fk > program_courses.id
+  module_no string fk > course_modules.module_no
+  attachment_1 string nullable  
+  attachment_2 string nullable  
+}
+
+course_modules [icon: layers, color: brown] {  // NEW TABLE
+  id string pk
+  course_id string fk > course.id
+  module_no number unique
+  module_name string
+}
+
+course_lectures [icon: video, color: indigo] {  // NEW TABLE
+  id string pk
+  course_id string fk > course.id
+  module_id string fk > course_modules.id
+  lecture_no number
+  topic_covered string
+  learning_methodology string
+  reading_reference string
+  focused_co string
+}
+
+payment_history [icon: credit-card, color: pink] {
+  id string pk
+  user_id string fk > users.id
+  program_semester_id string nullable fk > program_semesters.id
+  particular string
+  fee_amount number
+  due_date date nullable
+  amount_received number
+  received_on date nullable
+  receipt_no string unique nullable
+  type enum ['essential', 'additional']
+}
